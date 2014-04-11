@@ -62,6 +62,13 @@ KeyboardInputManager.prototype.listen = function () {
       if (mapped !== undefined) {
         event.preventDefault();
         self.emit("move", mapped);
+         // Para cargar el audio
+       if((new Audio()).canPlayType("audio/ogg; codecs=vorbis")){
+
+      var snd = new Audio("sounds/carta.mp3"); // buffers automatically when created
+      snd.play();
+
+        }
       }
     }
 
